@@ -151,6 +151,24 @@ else
     echo "Zed đã cài, bỏ qua."
 fi
 
+# ------------------------- 7. Font + cursor theme (chỉ tải, không apply) -------------------------
+log "7. Tải JetBrains Mono font + Bibata cursor theme (chưa apply theme)"
+
+if ! rpm -q jetbrains-mono-fonts &>/dev/null; then
+   sudo dnf install -y jetbrains-mono-fonts
+else
+   echo "jetbrains-mono-fonts đã cài, bỏ qua."
+fi
+
+# Bibata có sẵn qua Terra repo (đã add ở script post-install), không cần COPR
+if ! rpm -q bibata-cursor-theme &>/dev/null; then
+   sudo dnf install -y bibata-cursor-theme
+else
+   echo "Bibata cursor theme đã cài, bỏ qua."
+fi
+
+echo "Đã tải xong font/cursor theme. Chưa apply — tự chọn trong GNOME Tweaks / cosmic-settings / KDE System Settings khi cần."
+
 # ------------------------- Kết thúc -------------------------
 log "Hoàn tất cài app mặc định."
 echo -e "\033[1;33mLưu ý:\033[0m"
