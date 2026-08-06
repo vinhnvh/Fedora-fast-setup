@@ -19,7 +19,14 @@ Bộ 2 script tự động hoá quá trình setup máy Fedora mới cài xong: t
 ## Cài đặt nhanh
 
 ```bash
-# Tải script (hoặc clone repo)
+git clone https://github.com/vinhnvh/Fedora-fast-setup.git
+cd Fedora-fast-setup
+chmod +x fedora-post-install.sh fedora-install-apps.sh
+```
+
+Hoặc tải riêng lẻ không cần clone:
+
+```bash
 curl -O https://raw.githubusercontent.com/vinhnvh/Fedora-fast-setup/main/fedora-post-install.sh
 curl -O https://raw.githubusercontent.com/vinhnvh/Fedora-fast-setup/main/fedora-install-apps.sh
 
@@ -69,9 +76,10 @@ Script sẽ cài lần lượt:
 1. Steam
 2. Discord (gói native qua Terra repo)
 3. Brave Origin Nightly
-4. kitty, fish, starship (+ hỏi có muốn đổi shell mặc định sang fish không)
+4. kitty, fish, starship (COPR `atim/starship`) (+ hỏi có muốn đổi shell mặc định sang fish không)
 5. Bộ gõ tiếng Việt `fcitx5-lotus` (tự enable service, tắt ibus, thêm biến môi trường vào `~/.config/fish/config.fish`)
 6. Zed editor (qua script cài chính thức)
+7. JetBrains Mono font + Bibata cursor theme (chỉ tải gói, **không** tự apply — tự chọn trong GNOME Tweaks / cosmic-settings / KDE System Settings)
 
 > ⚠️ Sau khi cài xong, **đăng xuất/đăng nhập lại** (hoặc reboot) để fcitx5 và shell mới (nếu đổi) có hiệu lực. Mở `fcitx5-configtool` để thêm layout Telex/VNI nếu chưa tự động thêm.
 
