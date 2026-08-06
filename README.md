@@ -20,8 +20,8 @@ Bộ 2 script tự động hoá quá trình setup máy Fedora mới cài xong: t
 
 ```bash
 # Tải script (hoặc clone repo)
-curl -O https://raw.githubusercontent.com/<user>/<repo>/main/fedora-post-install.sh
-curl -O https://raw.githubusercontent.com/<user>/<repo>/main/fedora-install-apps.sh
+curl -O https://raw.githubusercontent.com/vinhnvh/Fedora-fast-setup/main/fedora-post-install.sh
+curl -O https://raw.githubusercontent.com/vinhnvh/Fedora-fast-setup/main/fedora-install-apps.sh
 
 chmod +x fedora-post-install.sh fedora-install-apps.sh
 ```
